@@ -31,11 +31,11 @@ function verificarNota($notaMaxima, $notaEstudiant){
         echo "Aquest estudiant está a Segona Divisió";
     }elseif($notaEstudiant <=$terceraDivisioSup || $notaEstudiant>=$terceraDivisioInf){
         echo "Aquest estudiant está a Tercera Divisió";
-    }else($notaEstudiant < $terceraDivisioInf){
-        echo "Aquest estudiant reaprovara";
+    }else{
+        echo "Aquest estudiant reaprobará";
     }
     
 }
 
-verificarNota($notaEstudiant);
+verificarNota($notaEstudiant, $notaEstudiant);
 ?>
