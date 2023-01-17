@@ -11,25 +11,25 @@ Si la nota és menor a 33%, l'estudiant reprovarà.
 */
 
 $notaMaxima = 10;
-$notaEstudiant = 5;
+$notaEstudiant = 3;
 
 function verificarNota($notaMaxima, $notaEstudiant){
 
     // Calcula el porcentatge
     
-    $primeraDivisio = $notaMaxima * 0.6;
-    $segonaDivisioSup = $notaMaxima * 0.59;
+    $primeraDivisio = $notaMaxima*0.6;
+    $segonaDivisioSup = $notaMaxima*0.59;
     $segonaDivisioInf = $notaMaxima *0.45;
     $terceraDivisioSup = $notaMaxima*0.44;
     $terceraDivisioInf = $notaMaxima*0.33;
     
 
     //Tria opció
-    if($notaEstudiant>=$primeraDivisio){
+    if($primeraDivisio <= $notaEstudiant){
         echo "Aquest estudiant está a Primera Divisió";
-    }elseif($notaEstudiant <= $segonaDivisioSup || $notaEstudiant>=$segonaDivisioInf){
+    }elseif(($segonaDivisioSup >= $notaEstudiant) && ($segonaDivisioInf<=$notaEstudiant)){
         echo "Aquest estudiant está a Segona Divisió";
-    }elseif($notaEstudiant <=$terceraDivisioSup || $notaEstudiant>=$terceraDivisioInf){
+    }elseif(($terceraDivisioSup >= $notaEstudiant) && ($terceraDivisioInf<=$notaEstudiant)){
         echo "Aquest estudiant está a Tercera Divisió";
     }else{
         echo "Aquest estudiant reaprobará";
@@ -37,5 +37,5 @@ function verificarNota($notaMaxima, $notaEstudiant){
     
 }
 
-verificarNota($notaEstudiant, $notaEstudiant);
+verificarNota($notaMaxima, $notaEstudiant);
 ?>
