@@ -7,15 +7,24 @@ function esParell($laMevaEdat){
     
     $divisio = $laMevaEdat/2;
     $esEnter=is_int($divisio);
+    //var_dump ($esEnter);
 
     if($esEnter){
         return TRUE;
     }else{
-        return FALSE;
+        return FALSE ;
     }
     
 }
 
-echo esParell(35);
+$resultat = esParell(34);
+//var_dump($resultat);
+
+if($resultat == TRUE){
+    echo "Es parell";
+}else{
+    echo "Es imparell";
+}
+
 
 ?>
