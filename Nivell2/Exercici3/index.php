@@ -14,4 +14,17 @@ funció(2 xocolates) + funció(1 de xiclets) + funció(1 de carmels) = 2 + 0.5 +
 Sent, per tant, el total, 4.
 */
 
+function comprar($xocolata,$xiclet,$caramel){
+
+    $xocolataPreu = 1;
+    $xicletPreu = 0.5;
+    $caramelPreu = 1.5;
+    $calculTotal = $xocolata*$xocolataPreu + $xiclet*$xicletPreu + $caramel*$caramelPreu;
+    return $calculTotal;
+    
+}
+
+echo "El total de la compra ".comprar(2, 1, 1);
+
+
 ?>
