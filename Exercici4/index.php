@@ -3,11 +3,11 @@
 
 $parametre = 10;
 
-function amagatall($parametre){
+function amagatall($parametre=10){
     for ($i = 0; $i <= 100; $i += $parametre) {
         echo "El número ", $i, "<br/>";
     }
 }
-amagatall($parametre);
+amagatall();
 
 ?>
