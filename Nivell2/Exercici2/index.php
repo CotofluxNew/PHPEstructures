@@ -16,16 +16,21 @@ Cada minut addicional a partir dels 3 primers és un pas de comptador i costa 5 
 
 ?><h1>quantitat total a pagar</h1><?php
 
-$minutsTrucada = 7;
 
-if($minutsTrucada<3){
-    echo "El cost de la trucada es de 0.10 centims";
-}else{
-    $calcuCostTrucada = ($minutsTrucada-3)*0.5;
-    echo "El cost de la trucada es de ".$calcuCostTrucada,"<br/>";
-    echo "Has trucat ".$minutsTrucada. " minuts.","<br/>";
+
+function calculaCostTrucada($minutsTrucada){
+
+    if($minutsTrucada<3){
+        echo "El cost de la trucada es de 0.10 centims";
+    }else{
+        $calcuCostTrucada = ($minutsTrucada-3)*0.5 +0.10;
+        echo "El cost de la trucada es de ".$calcuCostTrucada,"€<br/>";
+        echo "Has trucat ".$minutsTrucada. " minuts.","<br/>";
+    }
+
 }
 
+calculaCostTrucada(7);
 
 ?>
 
