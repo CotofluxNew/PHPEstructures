@@ -10,11 +10,11 @@ Si la nota està entre 33% to 44%, el grau hauria de ser Tercera Divisió.
 Si la nota és menor a 33%, l'estudiant reprovarà.
 */
 
-$notaMaxima = 10;
-$notaEstudiant = 3;
 
-function verificarNota($notaMaxima, $notaEstudiant){
+$notaEstudiant = 5.9;
 
+function verificarNota($notaEstudiant){
+    $notaMaxima = 10;
     // Calcula el porcentatge
     
     $primeraDivisio = $notaMaxima*0.6;
@@ -27,9 +27,9 @@ function verificarNota($notaMaxima, $notaEstudiant){
     //Tria opció
     if($primeraDivisio <= $notaEstudiant){
         echo "Aquest estudiant está a Primera Divisió";
-    }elseif(($segonaDivisioSup >= $notaEstudiant) && ($segonaDivisioInf<=$notaEstudiant)){
+    }elseif(($segonaDivisioSup >= $notaEstudiant) || ($segonaDivisioInf<=$notaEstudiant)){
         echo "Aquest estudiant está a Segona Divisió";
-    }elseif(($terceraDivisioSup >= $notaEstudiant) && ($terceraDivisioInf<=$notaEstudiant)){
+    }elseif(($terceraDivisioSup >= $notaEstudiant) || ($terceraDivisioInf<=$notaEstudiant)){
         echo "Aquest estudiant está a Tercera Divisió";
     }else{
         echo "Aquest estudiant reaprobará";
@@ -37,5 +37,5 @@ function verificarNota($notaMaxima, $notaEstudiant){
     
 }
 
-verificarNota($notaMaxima, $notaEstudiant);
+verificarNota($notaEstudiant);
 ?>
